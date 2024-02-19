@@ -16,6 +16,7 @@ public class Main {
         Task9();
         Task10();
 
+
     }
 
 
@@ -115,7 +116,6 @@ public class Main {
         }
 
     }
-
     public static void Task10() {
         int[] arr = new int[1];
         for (int i = 0; i < 1; i++) {
@@ -124,6 +124,7 @@ public class Main {
         }
 
     }
+
 }
 
 
