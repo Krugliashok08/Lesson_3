@@ -1,6 +1,9 @@
 package org.example;
 
+import java.util.stream.IntStream;
+
 public class Main {
+
     public static void main (String[] args) {
         Task1();
         Task2();
@@ -9,6 +12,10 @@ public class Main {
         Task5();
         Task6();
         Task7();
+        Task8();
+        Task9();
+        Task10();
+
     }
 
 
@@ -16,7 +23,6 @@ public class Main {
         int a=2;
         int b=20;
         int sum = a + b;
-
         if (sum >= 10 && sum <= 20) {
             return true;
         } else {
@@ -84,5 +90,41 @@ public class Main {
 
 
     }
+    public static void Task8() {
+
+        int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        int arrl = arr.length;
+        for (int i = 0; i < arrl; i++) {
+            if (arr[i] < 6) arr[i] = arr[i] * 2;
+        }
+        for (int i = 0; i < arrl; i++) {
+            System.out.print(i + "-" + arr[i] + " ");
+        }
+    }
+
+
+    public static void Task9 () {
+        int[][] arr = new int[5][5];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0, x = arr[i].length - 1; j < arr[i].length; j++, x--) {
+                if (i == j || i == x) arr[i][j] = 1;
+                else arr[i][j] = 0;
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.print("\n");
+        }
+
+    }
+
+    public static void Task10() {
+        int[] arr = new int[1];
+        for (int i = 0; i < 1; i++) {
+            arr[i] = 0;
+            System.out.print("[" + i + "]" + arr[i] + " ");
+        }
+
+    }
 }
+
+
 
