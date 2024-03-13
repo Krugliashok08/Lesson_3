@@ -6,10 +6,10 @@ public class Main {
 
     public static void main (String[] args) {
         Task1();
-        Task2();
-        Task3();
-        Task4();
-        Task5();
+        Task2(35);
+        Task3(-1);
+        Task4(3);
+        Task5(2020);
         Task6();
         Task7();
         Task8();
@@ -19,20 +19,21 @@ public class Main {
 
     }
 
-
     public static boolean Task1() {
-        int a=2;
-        int b=20;
+        int a = 2;
+        int b = 20;
         int sum = a + b;
+
         if (sum >= 10 && sum <= 20) {
+            System.out.println("Сумма лежит в пределах");
             return true;
         } else {
+            System.out.println("Сумма не лежит в пределах");
             return false;
         }
     }
 
-    public static void Task2() {
-        int a=35;
+    public static void Task2(int a) {
         if (a >= 0) {
             System.out.println("Number " + a + "Positive");
         } else {
@@ -40,32 +41,38 @@ public class Main {
         }
     }
 
-    public static boolean Task3() {
-        int a=-1;
-        if (a < 0) {
-            return true;
-        }
-        return false;
-    }
+    public static boolean Task3(int a) {
 
-    public static  void Task4() {
-        int i=3;
+        if (a < 0) {
+            System.out.println("Отрицательное");
+            return true;
+        } else {
+            System.out.println("Положительное");
+            return false;
+        }
+
+    }
+    public static  void Task4(int i) {
+
         for (int k = 0; k < i; k++) {
             System.out.println("Hello");
         }
     }
 
-    public static boolean Task5() {
-        int year = 2020;
-        if ((year % 4 == 0) && ((year % 4 == 0) && (year % 100 > 0)) || ((year % 4 == 0) && (year % 100 == 0) && (year % 400 == 0))) {
-            System.out.println("leap year");
-            return true;
-
+    public static boolean Task5(int year) {
+        if (year % 4 != 0) {
+            System.out.println(year + " Не високосный год");
         } else {
-            System.out.println("non-leap year");
-            return false;
         }
-    }
+            if (year % 100 == 0 && year % 400 != 0) {
+                System.out.println(year + " Не високосный год");
+                return true;
+
+            } else {
+                System.out.println("Високосный год");
+                return false;
+            }
+        }
 
     public static void Task6() {
 
